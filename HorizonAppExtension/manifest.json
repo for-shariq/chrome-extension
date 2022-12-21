@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "HorizonApp Extension",
+    "description": "This extension is used to login to the portal.",
+    "homepage_url": "https://in.ixl.com/signin",
+    "version": "1.0",
+    "action": {
+        "default_title": "Click here to login using HorizonApp",
+        "default_popup": "index.html"
+    },
+    "permissions" : [
+        "tabs",
+        "scripting"        
+    ],
+    "host_permissions" : [
+        "*://*/*",
+        "<all_urls>"
+    ]
+}
