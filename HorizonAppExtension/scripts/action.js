@@ -4,13 +4,12 @@ document.getElementById('fillForm').addEventListener('click',function(){
     var uid = document.getElementById('uid').value;
 
     chrome.tabs.query({ active: true }, function (tabs) {
-      tab = tabs[0];  
+      var tab = tabs[0];  
 
       new Promise(resolve=>{
         chrome.scripting.executeScript({
           target: { tabId:  tab.id, allFrames: true},
-          files: ['scripts/injector.js'],
-          args: [uid]
+          files: ['scripts/injector.js'],          
         });    
       }, () => { resolve(true) ;});
       
